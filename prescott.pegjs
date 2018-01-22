@@ -1,4 +1,11 @@
-Content = (Comment / BalancedTag / SelfClosingTag / Text)*
+Content = (Comment / BalancedTag / SelfClosingTag / Text /  Handlebars)*
+
+Handlebars = "{{" chars:[a-zA-Z0-9_\.\[\]\"\'\s]+ "}}" {
+  return {
+    type: 'Handlebars',
+    expression: chars.join('')
+  }
+}
 
 Comment = "<!--" c:(!"-->" c:. { return c })* "-->" {
   return {
@@ -66,7 +73,7 @@ UnquotedAttributeValue = value:decimalDigit* { return value.join('') }
 
 TagName = "n" / "iterate" / "if" / "else" / "escape"
 
-Text = chars:[^<]+  {
+Text = !Handlebars chars:[^<a-zA-Z0-9>]+ {
   return {
     type: 'Text',
     content: chars.join('')
