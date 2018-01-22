@@ -1,0 +1,17 @@
+{
+  "name": "prescott",
+  "version": "1.0.0",
+  "description": "",
+  "main": "prescott.js",
+  "dependencies": {
+    "pegjs": "^0.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build:parser": "pegjs -o parser.js prescott.pegjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
