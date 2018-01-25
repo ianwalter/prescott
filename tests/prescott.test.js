@@ -1,4 +1,4 @@
-const { compile } = require('../src/prescott')
+const { compile } = require('../lib/prescott')
 const { readFileSync } = require('fs')
 const { resolve } = require('path')
 
@@ -26,7 +26,7 @@ describe('Prescott', () => {
       ],
       year: 2018,
       author: {
-        name: 'Ian Kennington Walter',
+        name: 'Ian Walter',
         url: 'https://iankwalter.com'
       }
     }

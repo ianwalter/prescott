@@ -1,4 +1,4 @@
-const { parse } = require('../src/parser')
+const { parse } = require('../lib/parser')
 const { readFileSync } = require('fs')
 const { resolve } = require('path')
 

@@ -1,20 +1,28 @@
 {
   "name": "prescott",
-  "version": "1.0.0",
-  "description": "",
-  "main": "prescott.js",
+  "version": "0.0.1",
+  "description": "A super-simple templating language",
+  "main": "lib/prescott.js",
   "dependencies": {
-    "pegjs": "^0.10.0"
+    "clone": "^2.1.1"
   },
   "devDependencies": {
-    "jest": "^22.1.4"
+    "jest": "^22.1.4",
+    "pegjs": "^0.10.0"
   },
   "scripts": {
-    "build:parser": "pegjs -o src/parser.js src/prescott.pegjs",
-    "pretest": "npm run build:parser",
+    "build": "pegjs -o src/parser.js src/prescott.pegjs",
+    "pretest": "npm run build",
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "templating",
+    "language"
+  ],
+  "author": {
+    "name": "Ian Walter",
+    "email": "public@iankwalter.com",
+    "url": "https://iankwalter.com"
+  },
   "license": "ISC"
 }

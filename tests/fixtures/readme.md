@@ -6,7 +6,7 @@
 
 &npsp;
 
-ISC &copy; 2018 [Ian Kennington Walter](https://iankwalter.com)
+ISC &copy; 2018 [Ian Walter](https://iankwalter.com)
 
 [npm-image]: https://img.shields.io/npm/v/generates.svg
 [npm-url]: https://www.npmjs.com/package/generates
