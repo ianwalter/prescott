@@ -5,7 +5,7 @@
 [![{{ badge.description }}][{{ badge.key }}-image]][{{ badge.key }}-url]
 </iterate>
 
-&npsp;
+&nbsp;
 
 ISC &copy; {{ year }} [{{ author.name }}]({{ author.url }})
 

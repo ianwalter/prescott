@@ -4,7 +4,7 @@
 [![Npm page][npm-image]][npm-url]
 [![Build status][build-image]][build-url]
 
-&npsp;
+&nbsp;
 
 ISC &copy; 2018 [Ian Walter](https://iankwalter.com)
 

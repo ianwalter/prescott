@@ -1,6 +1,6 @@
 {
   "name": "prescott",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A super-simple templating language",
   "main": "lib/prescott.js",
   "dependencies": {
@@ -11,9 +11,10 @@
     "pegjs": "^0.10.0"
   },
   "scripts": {
-    "build": "pegjs -o src/parser.js src/prescott.pegjs",
+    "build": "pegjs -o lib/parser.js lib/prescott.pegjs",
     "pretest": "npm run build",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "npm run test"
   },
   "keywords": [
     "templating",

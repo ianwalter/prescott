@@ -14,17 +14,17 @@ files for scaffolding/bootstrapping.
 ## Installation
 
 ```fish
-npm i --save prescott
+npm install --save prescott
 ```
 
 ## Usage
 
 ```js
-import { parse } from 'prescott'
+import { compile } from 'prescott'
 
 const template = '{{ name }}'
 const data = { name: 'Coleman' }
-const render = parse(template)
+const render = compile(template)
 const output = render(data)
 // Outputs: Coleman
 ```
