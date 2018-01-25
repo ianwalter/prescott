@@ -29,7 +29,7 @@ const output = render(data)
 // Outputs: Coleman
 ```
 
-&npsp;
+&nbsp;
 
 ISC &copy; [Ian Walter](https://iankwalter.com)
 
