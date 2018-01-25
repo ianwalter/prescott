@@ -6,10 +6,13 @@
   "dependencies": {
     "pegjs": "^0.10.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^22.1.4"
+  },
   "scripts": {
-    "build:parser": "pegjs -o parser.js prescott.pegjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:parser": "pegjs -o src/parser.js src/prescott.pegjs",
+    "pretest": "npm run build:parser",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",

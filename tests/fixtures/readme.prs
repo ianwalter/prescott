@@ -1,0 +1,15 @@
+# {{ name }}
+> {{ description }}
+
+<iterate over="badges" value="badge">
+[![{{ badge.description }}][{{ badge.key }}-image]][{{ badge.key }}-url]
+</iterate>
+
+&npsp;
+
+ISC &copy; {{ year }} [{{ author.name }}]({{ author.url }})
+
+<iterate over="badges" value="badge">
+[{{ badge.key }}-image]: {{ badge.image }}
+[{{ badge.key }}-url]: {{ badge.url }}
+</iterate>

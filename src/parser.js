@@ -208,7 +208,7 @@ function peg$parse(input, options) {
       peg$c30 = function(name) { return name },
       peg$c31 = " ",
       peg$c32 = peg$literalExpectation(" ", false),
-      peg$c33 = function(attributes) { return attributes },
+      peg$c33 = function(attributes) { return attributes[0] },
       peg$c34 = "=",
       peg$c35 = peg$literalExpectation("=", false),
       peg$c36 = function(name, value) {

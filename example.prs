@@ -1,8 +1,0 @@
-# {{ name }}
-> {{ description }}
-
-<iterate over="badges" value="badge">
-{{ badge }}
-</iterate>
-
-&copy; 2018 Ian Walter

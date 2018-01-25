@@ -48,7 +48,7 @@ StartTag = "<" name:TagName attributes:Attributes* ">" "\n"? {
 
 EndTag = "</" name:TagName ">" "\n"? { return name }
 
-Attributes = " " attributes:Attribute* { return attributes }
+Attributes = " " attributes:Attribute* { return attributes[0] }
 
 Attribute = (ValuedAttribute / ValuelessAttribute)
 
