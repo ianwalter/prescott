@@ -1,11 +1,8 @@
 {
   "name": "prescott",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A super-simple templating language",
   "main": "lib/prescott.js",
-  "dependencies": {
-    "clone": "^2.1.1"
-  },
   "devDependencies": {
     "jest": "^22.1.4",
     "pegjs": "^0.10.0"

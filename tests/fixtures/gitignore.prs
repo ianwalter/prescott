@@ -1,0 +1,9 @@
+<iterate over="sections" value="section" last>
+# {{ section.comment }}
+<iterate over="section.lines" value="line">
+{{ line }}
+</iterate>
+<include unless="last">
+
+</include>
+</iterate>

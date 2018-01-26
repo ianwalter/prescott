@@ -2,11 +2,12 @@ const { compile } = require('../lib/prescott')
 const { readFileSync } = require('fs')
 const { resolve } = require('path')
 
-const template = readFileSync(resolve(__dirname, 'fixtures/readme.prs'), 'utf8')
-const readme = readFileSync(resolve(__dirname, 'fixtures/readme.md'), 'utf8')
+const fixture = file => resolve(__dirname, `fixtures/${file}`)
 
 describe('Prescott', () => {
-  test('can render a readme template correctly', () => {
+  test('can render the readme template correctly', () => {
+    const template = readFileSync(fixture('readme.prs'), 'utf8')
+    const output = readFileSync(fixture('readme.md'), 'utf8')
     const data = {
       name: 'Generates',
       description: 'Easier file generation/scaffolding/bootstrapping',
@@ -31,6 +32,25 @@ describe('Prescott', () => {
       }
     }
     const render = compile(template)
-    expect(render(data)).toBe(readme)
+    expect(render(data)).toBe(output)
+  })
+
+  test('can render the gitignore template correctly', () => {
+    const template = readFileSync(fixture('gitignore.prs'), 'utf8')
+    const output = readFileSync(fixture('gitignore.txt'), 'utf8')
+    const data = {
+      sections: {
+        os: {
+          comment: 'OS-generated files',
+          lines: ['.DS_Store']
+        },
+        deps: {
+          comment: 'Application dependencies',
+          lines: ['node_modules']
+        }
+      }
+    }
+    const render = compile(template)
+    expect(render(data)).toBe(output)
   })
 })
