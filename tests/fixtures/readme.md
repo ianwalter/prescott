@@ -1,8 +1,20 @@
-# Generates
+# Generates: Readme
 > Easier file generation/scaffolding/bootstrapping
 
 [![Npm page][npm-image]][npm-url]
 [![Build status][build-image]][build-url]
+
+## Installation
+
+```fish
+npm install -g generates-readme
+```
+
+## CLI Usage
+
+```fish
+generates-readme
+```
 
 &nbsp;
 

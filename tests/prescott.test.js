@@ -5,11 +5,14 @@ const { resolve } = require('path')
 const fixture = file => resolve(__dirname, `fixtures/${file}`)
 
 describe('Prescott', () => {
-  test('can render the readme template correctly', () => {
-    const template = readFileSync(fixture('readme.prs'), 'utf8')
+  test.only('can render the readme template correctly', () => {
+    const main = readFileSync(fixture('readme.prs'), 'utf8')
+    const install = readFileSync(fixture('install.prs'), 'utf8')
+    const usage = readFileSync(fixture('usage.prs'), 'utf8')
     const output = readFileSync(fixture('readme.md'), 'utf8')
     const data = {
-      name: 'Generates',
+      name: 'Generates: Readme',
+      shortName: 'generates-readme',
       description: 'Easier file generation/scaffolding/bootstrapping',
       badges: [
         {
@@ -25,13 +28,23 @@ describe('Prescott', () => {
           url: 'https://circleci.com/ianwalter/generates'
         }
       ],
+      sections: {
+        install: {
+          title: 'Installation',
+          template: compile(install)
+        },
+        usage: {
+          title: 'CLI Usage',
+          template: compile(usage)
+        }
+      },
       year: 2018,
       author: {
         name: 'Ian Walter',
         url: 'https://iankwalter.com'
       }
     }
-    const render = compile(template)
+    const render = compile(main)
     expect(render(data)).toBe(output)
   })
 

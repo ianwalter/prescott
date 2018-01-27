@@ -5,6 +5,15 @@
 [![{{ badge.description }}][{{ badge.key }}-image]][{{ badge.key }}-url]
 </iterate>
 
+<iterate over="sections" value="section" last>
+## {{ section.title }}
+
+<include template="section.template" />
+<include unless="last">
+
+</include>
+</iterate>
+
 &nbsp;
 
 ISC &copy; {{ year }} [{{ author.name }}]({{ author.url }})
