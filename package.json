@@ -11,7 +11,7 @@
     "build": "pegjs -o lib/parser.js lib/prescott.pegjs",
     "pretest": "npm run build",
     "test": "jest",
-    "prepublish": "npm run test"
+    "prepublishOnly": "npm run test"
   },
   "keywords": [
     "templating",
