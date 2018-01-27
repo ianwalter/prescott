@@ -5,7 +5,7 @@ const { resolve } = require('path')
 const fixture = file => resolve(__dirname, `fixtures/${file}`)
 
 describe('Prescott', () => {
-  test.only('can render the readme template correctly', () => {
+  test('can render the readme template correctly', () => {
     const main = readFileSync(fixture('readme.prs'), 'utf8')
     const install = readFileSync(fixture('install.prs'), 'utf8')
     const usage = readFileSync(fixture('usage.prs'), 'utf8')
