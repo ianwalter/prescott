@@ -9,9 +9,7 @@
 ## {{ section.title }}
 
 <include template="section.template" />
-<include unless="last">
-
-</include>
+<include unless="last"><n /></include>
 </iterate>
 
 &nbsp;
