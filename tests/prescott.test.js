@@ -14,20 +14,6 @@ describe('Prescott', () => {
       name: 'Generates: Readme',
       shortName: 'generates-readme',
       description: 'Easier file generation/scaffolding/bootstrapping',
-      badges: [
-        {
-          key: 'npm',
-          description: 'Npm page',
-          image: 'https://img.shields.io/npm/v/generates.svg',
-          url: 'https://www.npmjs.com/package/generates'
-        },
-        {
-          key: 'build',
-          description: 'Build status',
-          image: 'https://circleci.com/ianwalter/generates.svg',
-          url: 'https://circleci.com/ianwalter/generates'
-        }
-      ],
       sections: {
         install: {
           title: 'Installation',

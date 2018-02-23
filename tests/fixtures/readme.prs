@@ -3,8 +3,8 @@
 
 <iterate over="badges" value="badge">
 [![{{ badge.description }}][{{ badge.key }}-image]][{{ badge.key }}-url]
+<include unless="last"><n /></include>
 </iterate>
-
 <iterate over="sections" value="section" last>
 ## {{ section.title }}
 
@@ -15,8 +15,8 @@
 &nbsp;
 
 ISC &copy; {{ year }} [{{ author.name }}]({{ author.url }})
-
-<iterate over="badges" value="badge">
+<iterate over="badges" value="badge" first>
+<include unless="first"><n /></include>
 [{{ badge.key }}-image]: {{ badge.image }}
 [{{ badge.key }}-url]: {{ badge.url }}
 </iterate>
