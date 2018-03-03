@@ -6,7 +6,7 @@
 <include unless="last"><n /></include>
 </iterate>
 <iterate over="sections" value="section" last>
-## {{ section.title.toUppercase() }}
+## {{ section.title.toUpperCase() }}
 
 <include template="section.template" />
 <include unless="last"><n /></include>

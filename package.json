@@ -1,6 +1,6 @@
 {
   "name": "prescott",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A super-simple templating language",
   "main": "lib/prescott.js",
   "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
@@ -30,9 +30,6 @@
     "pretest": "npm run build",
     "test": "jest",
     "prepublishOnly": "npm run test"
-  },
-  "dependencies": {
-    "deepmerge": "^2.0.1"
   },
   "devDependencies": {
     "jest": "^22.1.4",
