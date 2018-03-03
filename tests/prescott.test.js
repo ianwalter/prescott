@@ -37,19 +37,32 @@ describe('Prescott', () => {
   test('can render the gitignore template correctly', () => {
     const template = readFileSync(fixture('gitignore.prs'), 'utf8')
     const output = readFileSync(fixture('gitignore.txt'), 'utf8')
-    const data = {
-      sections: {
-        os: {
-          comment: 'OS-generated files',
-          lines: ['.DS_Store']
-        },
-        deps: {
-          comment: 'Application dependencies',
-          lines: ['node_modules']
-        }
+    const sections = {
+      os: {
+        comment: 'OS-generated files',
+        lines: ['.DS_Store']
+      },
+      deps: {
+        comment: 'Application dependencies',
+        lines: ['node_modules']
       }
     }
     const render = compile(template)
-    expect(render(data)).toBe(output)
+    expect(render({ sections })).toBe(output)
+  })
+
+  test('can render the config template correctly', () => {
+    const output = readFileSync(fixture('config.json'), 'utf8')
+    const config = {
+      environment: 'office',
+      loud: true,
+      songs: [
+        'Dear to Me',
+        'Holiday',
+        'Oh Devil'
+      ]
+    }
+    const render = compile('<to json="config"/>\n\n')
+    expect(render({ config })).toBe(output)
   })
 })
