@@ -1,13 +1,13 @@
 # Generates: Readme
 > Easier file generation/scaffolding/bootstrapping
 
-## Installation
+## INSTALLATION
 
 ```fish
 npm install -g generates-readme
 ```
 
-## CLI Usage
+## CLI USAGE
 
 ```fish
 generates-readme
