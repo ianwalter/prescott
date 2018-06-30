@@ -2,6 +2,7 @@
 > A super-simple templating language
 
 [![Npm page][npm-image]][npm-url]
+[![Build status][build-image]][build-url]
 
 ## About
 
@@ -35,3 +36,6 @@ ISC &copy; [Ian Walter](https://iankwalter.com)
 
 [npm-image]: https://img.shields.io/npm/v/prescott.svg
 [npm-url]: https://www.npmjs.com/package/prescott
+[build-image]: https://travis-ci.com/ianwalter/prescott.svg?branch=master
+[build-url]: https://travis-ci.com/ianwalter/prescott
+
