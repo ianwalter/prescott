@@ -30,9 +30,13 @@ const output = render(data)
 // Outputs: Coleman
 ```
 
+## License
+
+Apache 2.0 with Commons Clause - See [LICENSE](https://github.com/ianwalter/subpub/blob/master/LICENSE)
+
 &nbsp;
 
-ISC &copy; [Ian Walter](https://iankwalter.com)
+Created by [Ian Walter](https://iankwalter.com)
 
 [npm-image]: https://img.shields.io/npm/v/prescott.svg
 [npm-url]: https://www.npmjs.com/package/prescott

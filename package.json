@@ -4,7 +4,7 @@
   "description": "A super-simple templating language",
   "main": "lib/prescott.js",
   "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
-  "license": "ISC",
+  "license": "Apache 2.0 with Commons Clause",
   "homepage": "https://github.com/ianwalter/prescott#readme",
   "repository": {
     "type": "git",
@@ -22,9 +22,6 @@
     "LICENSE",
     "README.md"
   ],
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "build": "pegjs -o lib/parser.js lib/prescott.pegjs",
     "pretest": "npm run build",
