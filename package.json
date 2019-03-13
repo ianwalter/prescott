@@ -29,7 +29,7 @@
     "prepublishOnly": "npm run test"
   },
   "devDependencies": {
-    "jest": "^23.6.0",
+    "jest": "^24.5.0",
     "np": "^4.0.1",
     "pegjs": "^0.10.0"
   }
